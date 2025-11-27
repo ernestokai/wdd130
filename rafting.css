@@ -1,3 +1,24 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+  --primary-color: #004466;
+  --accent-color: #f0f8ff;
+  --heading-font: Arial, sans-serif;
+  --body-font: Verdana, sans-serif;
+}
+
+/* Body */
+body {
+  font-family: var(--body-font);
+  color: #333;
+  line-height: 1.6;
+}
 
 /* Header Layout */
 header {
@@ -5,7 +26,7 @@ header {
   grid-template-columns: auto 1fr;
   align-items: center;
   padding: 10px;
-  background-color: #004466;
+  background-color: var(--primary-color);
   color: white;
 }
 header img {
@@ -21,12 +42,19 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
+nav a:hover {
+  text-decoration: underline;
+}
 
 /* History Section */
 .history {
   padding: 20px;
-  background-color: #f0f8ff;
+  background-color: var(--accent-color);
   text-align: center;
+}
+.history h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
 }
 
 /* Adventures Section */
@@ -43,6 +71,10 @@ nav a {
   width: 100%;
   border-radius: 8px;
 }
+.adventures figcaption {
+  margin-top: 5px;
+  font-weight: bold;
+}
 
 /* Footer */
 footer {
@@ -50,7 +82,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #004466;
+  background-color: var(--primary-color);
   color: white;
 }
 .social {
@@ -60,3 +92,16 @@ footer {
 .social img {
   width: 30px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .adventures {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .adventures figure {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
