@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Ernest | WDD130 Home</title>
-
-  <!-- New meta tags -->
-  <meta name="description" content="Ernest's WDD130 course home page — web fundamentals, Durban, South Africa, personal learning and projects.">
-  <meta name="author" content="Ernest">
-
-  <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="White Water Rafting Adventures - Experience the thrill of rafting with us!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafting Adventures | Home</title>
+  <link rel="stylesheet" href="rafting.css">
 </head>
 <body>
   <header>
-    <h1>Ernest — WDD130: Web Fundamentals</h1>
+    <h1>Rafting Adventures</h1>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">W1</a></li>
-        <li><a href="#">W2</a></li>
-        <li><a href="#">W3</a></li>
-        <li><a href="#">W4</a></li>
-        <li><a href="#">W5</a></li>
-        <li><a href="#">W6</a></li>
-        <li><a href="#">W7</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Welcome</h2>
-      <p>Hi, I’m Ernest.  I’m based in Durban, South Africa and passionate about building with purpose.</p>
-    <img src="images/profile.jpg" alt="Ernest, head-and-shoulders portrait facing the camera, smiling gently and wearing a casual shirt; softly blurred beachfront cityscape behind him; friendly and approachable tone; no visible text">
-    </section>
-  </main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Rafting adventure on the river">
+    <h2 class="hero-text">Life is a Journey—Make it an Adventure!</h2>
+  </section>
 
-  <!-- New aside element -->
-  <aside>
-    <h2>Durban, South Africa</h2>
-    <img src="images/durban.jpg" alt="Durban beachfront and cityscape">
-    <p>Durban is a coastal city known for warm beaches, rich cultural diversity, and vibrant entrepreneurship. It’s a place where community and resilience shape everyday life.</p>
-  </aside>
+  <!-- Newsletter Signup -->
+  <section class="newsletter">
+    <h3>Sign up for our Newsletter</h3>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <p>Ready for the thrill? Explore our trips now!</p>
+    <a href="trips.html" class="btn">View Trips</a>
+  </section>
+
+  <!-- Grid Layout -->
+  <section class="grid-layout">
+    <div>
+      <img src="images/rafting1.jpg" alt="Group rafting adventure">
+      <p>Experience teamwork and excitement on the rapids.</p>
+    </div>
+    <div>
+      <img src="images/rafting2.jpg" alt="Rafting through scenic landscapes">
+      <p>Enjoy breathtaking views while conquering the river.</p>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Ernest — WDD130</p>
+    <p>&copy; 2025 Rafting Adventures | Designed for WDD130</p>
   </footer>
 </body>
 </html>

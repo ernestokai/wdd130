@@ -1,107 +1,95 @@
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Root Variables */
-:root {
-  --primary-color: #acd6ed;
-  --accent-color: #e3eaf1;
-  --heading-font: Arial, sans-serif;
-  --body-font: Verdana, sans-serif;
-}
-
-/* Body */
 body {
-  font-family: var(--body-font);
-  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
   line-height: 1.6;
 }
 
-/* Header Layout */
-header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  padding: 10px;
-  background-color: var(--primary-color);
+header, footer {
+  background: #004466;
   color: white;
+  text-align: center;
+  padding: 1rem;
 }
-header img {
-  max-height: 60px;
-}
-nav {
+
+nav ul {
+  list-style: none;
+  padding: 0;
   display: flex;
-  justify-content: flex-end;
-  gap: 20px;
+  justify-content: center;
+  gap: 1rem;
 }
+
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
-}
-nav a:hover {
-  text-decoration: underline;
 }
 
-/* History Section */
-.history {
-  padding: 20px;
-  background-color: var(--accent-color);
-  text-align: center;
-}
-.history h2 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
+.hero {
+  position: relative;
 }
 
-/* Adventures Section */
-.adventures {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-.adventures figure {
-  text-align: center;
-  width: 18%;
-}
-.adventures img {
+.hero img {
   width: 100%;
-  border-radius: 8px;
-}
-.adventures figcaption {
-  margin-top: 5px;
-  font-weight: bold;
+  height: auto;
 }
 
-/* Footer */
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: var(--primary-color);
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-}
-.social {
-  display: flex;
-  gap: 10px;
-}
-.social img {
-  width: 30px;
+  font-size: 2rem;
+  background: rgba(0,0,0,0.5);
+  padding: 1rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .adventures {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .adventures figure {
-    width: 45%;
-    margin-bottom: 20px;
-  }
+.newsletter, .cta, .grid-layout, .trip-descriptions, .trips-table {
+  padding: 2rem;
+  text-align: center;
 }
 
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.grid-layout img {
+  width: 100%;
+  height: auto;
+}
+
+.trip-descriptions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.trip-descriptions img {
+  width: 100%;
+  height: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.btn {
+  background: #004466;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
